@@ -1,7 +1,7 @@
-# class
+# Class
 A simple lua class manager.
 
-## Getting started
+### Getting started
 Classes are initiated like this:
 ```lua
 local Object = class:extend()
@@ -18,7 +18,7 @@ To actually create a class object, do the following.
 local object = Object:new()
 ```
 
-## Child classes
+### Child classes
 You can create subclasses by using the same `extend` method.
 ```lua
 local Sword = Object:extend()
@@ -32,7 +32,7 @@ function Sword:template()
 end
 ```
 
-## Merged classes
+### Merged classes
 Merged classes are classes that inherit from multiple other classes.
 ```lua
 local Car = class.merge(Engine, Wheels)
