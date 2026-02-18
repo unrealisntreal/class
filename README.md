@@ -1,3 +1,5 @@
+*i know this documentation is horrible right now, it will be updated soon.*
+
 # Class
 A simple lua class manager.
 
