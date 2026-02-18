@@ -39,10 +39,10 @@ local Car = class.merge(Engine, Wheels)
 ```
 ```lua
 -- Merging class A with class B may give different results than merging class B with class A.
--- If class A and B have identical keys with different values, the merged class will obtain class B's values.
+-- If class A and B have identical keys with different values,
+-- the merged class will obtain class B's values.
 local Car = Engine:merge(Wheels) or Wheels:merge(Engine)
-```
-```lua
+
 -- You can define the template for such objects however you want, choosing what
 -- works best for your project.
 ```
