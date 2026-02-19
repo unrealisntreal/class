@@ -1,5 +1,5 @@
 # Class ![Lua](https://img.shields.io/badge/lua-5.1%20%7C%20JIT-blue) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-A high-performance class manager, primarely made for games.
+A high-performance class manager, primarely made for LOVE.
 
 > [!TIP]
 > Using the sumneko's lua addon, your workplace should have this setting.
