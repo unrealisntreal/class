@@ -1,6 +1,9 @@
 local class = {}
 local metatable = {__index = class}
 
+local setmetatable = setmetatable
+local pairs = pairs
+
 function class:template(...)
   error("Cannot instantiate class.", 2)
 end
@@ -32,12 +35,10 @@ function class.merge(...)
   local newclass = {}
 
   for i = 1, #classes do
-
     local current = classes[i]
     for k, v in pairs(current) do
       newclass[k] = v
     end
-
   end
 
   newclass.draw = nil
