@@ -37,8 +37,8 @@ local sphere = Sphere:new(0, 5, 0)
 
 ### Merged classes
 Merged classes are classes that inherit from multiple other classes.
+If class A and class B share field X, the new merged class obtains
+field X of class B, if it is the last passed class in the method.
 ```lua
 local Car = Engine:merge(Wheels) or class.merge(Engine, Wheels)
 ```
-If class A and class B share field X, the new merged class obtains
-field X of class B, if it is the last passed class in the method.
