@@ -41,3 +41,13 @@ If class A and class B share field X, the new merged class obtains field X of cl
 ```lua
 local Car = Engine:merge(Wheels) or class.merge(Engine, Wheels)
 ```
+
+> [!TIP]
+> Using the sumneko's lua addon, your workplace should have this setting.
+>```json
+>{
+>    "Lua.diagnostics.disable": [
+>        "duplicate-set-field"
+>    ],
+>}
+>```
