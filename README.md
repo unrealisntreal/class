@@ -18,7 +18,7 @@ end
 ```
 
 ### Extended templates
-If a class inherits from another, templates can be wrote like this:
+If a class inherits from another, templates can be written like this:
 ```lua
 local Sphere = Object:extend()
 
