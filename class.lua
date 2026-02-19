@@ -40,6 +40,8 @@ function class.merge(...)
 
   end
 
+  newclass.draw = nil
+  newclass.update = nil
   newclass.template = nil
   newclass.__index = newclass
 
