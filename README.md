@@ -1,7 +1,7 @@
 # Class
 A simple lua class manager. Made for big projects.
 
-> [!WARNING]
+> [!IMPORTANT]
 > This module flattens class methods to prevent a huge metatable chain, at the cost of more memory usage.
 
 ### Extending a class
@@ -45,3 +45,5 @@ field X of class B, if it is the last passed class in the method.
 ```lua
 local Car = Engine:merge(Wheels) or class.merge(Engine, Wheels)
 ```
+> [!IMPORTANT]
+> If class A and class B share field X, the new merged class obtains field X of class B, if it is the last passed class in the method.
