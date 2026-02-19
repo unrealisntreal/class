@@ -1,5 +1,5 @@
 # Class ![Lua](https://img.shields.io/badge/lua-5.1%20%7C%20JIT-blue) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-A simple lua class manager. This module flattens class fields & methods to prevent a huge metatable chain, at the cost of more memory usage.
+A high-performance simple class manager.
 
 ### Extending a class
 ```lua
