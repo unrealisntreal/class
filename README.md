@@ -20,29 +20,25 @@ end
 ### Extended templates
 If a class inherits from another, templates can be wrote like this:
 ```lua
-local Sword = Object:extend()
+local Sphere = Object:extend()
 
-function Sword:template()
+function Sphere:template()
 
   Object.template(self)
-  self.damage = 25
-  self.durability = 5
+  self.radius = 5
 
 end
 ```
 
 ### Instantiating
 ```lua
-local object = Object:new(1, 3, 5)
+local sphere = Sphere:new(0, 5, 0)
 ```
 
 ### Merged classes
 Merged classes are classes that inherit from multiple other classes.
 ```lua
-local Car = class.merge(Engine, Wheels) or Engine:merge(Wheels)
+local Car = Engine:merge(Wheels) or class.merge(Engine, Wheels)
 ```
 If class A and class B share field X, the new merged class obtains
 field X of class B, if it is the last passed class in the method.
-```lua
-local Car = Wheels:merge(Engine)
-```
