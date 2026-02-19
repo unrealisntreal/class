@@ -1,4 +1,4 @@
-# Class ![Lua](https://img.shields.io/badge/lua-5.1%20%7C%20JIT-blue)
+# Class ![Lua](https://img.shields.io/badge/lua-5.1%20%7C%20JIT-blue) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 A simple lua class manager. Made for big projects.
 
 > [!IMPORTANT]
