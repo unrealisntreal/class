@@ -1,51 +1,47 @@
-*i know this documentation is horrible right now, it will be updated soon.*
-
 # Class
-A simple lua class manager.
+A simple lua class manager. Made for big projects.
 
-### Getting started
+### Extending a class
 ```lua
--- Classes are initiated like this:
 local Object = class:extend()
 ```
+### Templates
+Templates represent the data structure of class objects.
+Classes are uninstantiable if no template is defined.
 ```lua
--- They must have a template method to be instantiated.
-function Object:template()
-  self.weight = 10
-  self.size = 1
+function Object:template(x, y, z)
+  self.position = vector(x, y, z)
+  self.orientation = quaterion(1, 0, 0, 0)
 end
 ```
-```lua
--- To actually create a class object, do the following.
-local object = Object:new()
-```
 
-### Child classes
+### Extended templates
+If a class inherits from another, templates can be wrote like this:
 ```lua
--- You can create subclasses by using the same method.
 local Sword = Object:extend()
-```
-```lua
--- To inherit the superclass' object fields, you can define the template like this:
+
 function Sword:template()
   Object.template(self)
   self.damage = 25
-  self.level = 2
+  self.durability = 5
 end
 ```
 
-### Merged classes
+### Instantiating
 ```lua
--- Merged classes are classes that inherit from multiple other classes.
+local object = Object:new(1, 3, 5)
+```
+
+### Merged classes
+Merged classes are classes that inherit from multiple other classes.
+```lua
 local Car = class.merge(Engine, Wheels)
 ```
 ```lua
--- Merging class A with class B may give different results than merging class B with class A.
--- If class A and B have identical keys with different values,
--- the merged class will obtain class B's values.
-
-local Car = Engine:merge(Wheels) or Wheels:merge(Engine)
-
--- You can define the template for such objects however you want, choosing what
--- works best for your project.
+local Car = Engine:merge(Wheels)
 ```
+```lua
+local Car = Wheels:merge(Engine)
+```
+If class A and class B share field X, the new merged class obtains
+field X of class B, if it is the last passed class in the method.
