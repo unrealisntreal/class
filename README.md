@@ -1,6 +1,16 @@
 # Class ![Lua](https://img.shields.io/badge/lua-5.1%20%7C%20JIT-blue) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 A high-performance class manager.
 
+> [!TIP]
+> Using the sumneko's lua addon, your workplace should have this setting.
+>```json
+>{
+>    "Lua.diagnostics.disable": [
+>        "duplicate-set-field"
+>    ],
+>}
+>```
+
 ### Extending a class
 ```lua
 local Object = class:extend()
@@ -41,13 +51,3 @@ If class A and class B share field X, the new merged class obtains field X of cl
 ```lua
 local Car = Engine:merge(Wheels) or class.merge(Engine, Wheels)
 ```
-
-> [!TIP]
-> Using the sumneko's lua addon, your workplace should have this setting.
->```json
->{
->    "Lua.diagnostics.disable": [
->        "duplicate-set-field"
->    ],
->}
->```
