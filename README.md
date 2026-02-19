@@ -1,6 +1,9 @@
 # Class
 A simple lua class manager. Made for big projects.
 
+> [!IMPORTANT]
+> This module flattens class methods to prevent a huge metatable chain, at the cost of more memory usage.
+
 ### Extending a class
 ```lua
 local Object = class:extend()
