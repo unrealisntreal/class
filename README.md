@@ -2,7 +2,7 @@
 A high-performance class manager with annotations.
 
 > [!TIP]
-> Using sumneko's luaLS extension, your workplace should have this setting.
+> Using sumneko's luaLS extension, your workspace should have this setting.
 >```json
 >{
 >    "Lua.diagnostics.disable": [
