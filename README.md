@@ -2,7 +2,7 @@
 A high-performance class manager.
 
 > [!TIP]
-> Using the sumneko's luaLS extension, your workplace should have this setting.
+> Using sumneko's luaLS extension, your workplace should have this setting.
 >```json
 >{
 >    "Lua.diagnostics.disable": [
