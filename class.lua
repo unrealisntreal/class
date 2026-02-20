@@ -7,11 +7,11 @@ function class:template(...)
 end
 
 ---@generic T: Class
----@param self T
+---@param self T | any
 ---@return T
 function class:new(...)
 
-  local instance = setmetatable({}, self)
+  local instance = {}
   self.template(instance, ...)
   return setmetatable(instance, self)
 
