@@ -13,6 +13,7 @@ A high-performance class manager.
 
 ### Extending a class
 ```lua
+---@class Object: Class
 local Object = class:extend()
 ```
 ### Templates
@@ -30,6 +31,7 @@ end
 ### Extended templates
 If a class inherits from another, templates can be written like this:
 ```lua
+---@class Sphere: Object
 local Sphere = Object:extend()
 
 function Sphere:template()
