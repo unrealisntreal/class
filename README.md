@@ -65,10 +65,6 @@ function Car:template()
 
 end
 ```
-Merged classes can also be written like this:
-```lua
-local Car = Engine:merge(Wheels)
-```
 ### Instantiating
 ```lua
 local car = Car:new()
