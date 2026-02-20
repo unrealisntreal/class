@@ -1,16 +1,6 @@
 # Class ![Lua](https://img.shields.io/badge/lua-5.1%20%7C%20JIT-blue) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 A high-performance class manager with annotations.
 
-> [!TIP]
-> Using sumneko's luaLS extension, your workspace should have this setting.
->```json
->{
->    "Lua.diagnostics.disable": [
->        "duplicate-set-field"
->    ],
->}
->```
-
 ### Extending a class
 ```lua
 ---@class Object: Class
