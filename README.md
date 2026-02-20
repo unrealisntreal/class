@@ -47,7 +47,7 @@ end
 
 ### Merged classes
 Merged classes are classes that inherit from multiple other classes.
-If class *A* and class *B* share field *X*, the new class obtains field *X* of class *B*, if it is the last passed class in the method.
+If class *A* and class *B* share field *X*, the new class obtains field *X* of class *B*, if it is the last passed class.
 ```lua
 local Engine = Object:extend()
 -- ...
@@ -65,7 +65,10 @@ function Car:template()
 
 end
 ```
-
+Merged classes can also be written like this:
+```lua
+local Car = Engine:merge(Wheels)
+```
 ### Instantiating
 ```lua
 local car = Car:new()
