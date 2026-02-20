@@ -20,6 +20,9 @@ local Object = class:extend()
 Templates represent the data structure of class objects.
 Classes are uninstantiable if no template is defined.
 ```lua
+---@param x number
+---@param y number
+---@pâram z number
 function Object:template(x, y, z)
 
   self.position = vector(x, y, z)
