@@ -1,16 +1,17 @@
+---@class Class
 local class = {}
 local metatable = {__index = class}
-
-local setmetatable = setmetatable
-local pairs = pairs
 
 function class:template(...)
   error("Cannot instantiate class.", 2)
 end
 
+---@generic T: Class
+---@param self T
+---@return T
 function class:new(...)
 
-  local instance = {}
+  local instance = setmetatable({}, self)
   self.template(instance, ...)
   return setmetatable(instance, self)
 
@@ -40,11 +41,11 @@ function class.merge(...)
       newclass[k] = v
     end
   end
+  newclass.__index = newclass
 
   newclass.draw = nil
   newclass.update = nil
   newclass.template = nil
-  newclass.__index = newclass
 
   return setmetatable(newclass, metatable)
 
