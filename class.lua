@@ -42,9 +42,6 @@ function class.merge(...)
     end
   end
   newclass.__index = newclass
-
-  newclass.draw = nil
-  newclass.update = nil
   newclass.template = nil
 
   return setmetatable(newclass, metatable)
