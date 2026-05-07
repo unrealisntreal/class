@@ -1,6 +1,6 @@
 ---@class Class
-local class = {}
-local metatable = {__index = class}
+local class = { }
+local metatable = { __index = class }
 
 function class:template(...)
   error("Cannot instantiate class.", 2)
@@ -10,16 +10,13 @@ end
 ---@param self T | any
 ---@return T
 function class:new(...)
-
-  local instance = {}
+  local instance = { }
   self.template(instance, ...)
   return setmetatable(instance, self)
-
 end
 
 function class:extend()
-
-  local newclass = {}
+  local newclass = { }
 
   for k, v in pairs(self) do
     newclass[k] = v
@@ -27,13 +24,11 @@ function class:extend()
   newclass.__index = newclass
 
   return setmetatable(newclass, metatable)
-
 end
 
 function class.merge(...)
-
-  local classes = {...}
-  local newclass = {}
+  local classes = { ... }
+  local newclass = { }
 
   for i = 1, #classes do
     local current = classes[i]
@@ -45,7 +40,6 @@ function class.merge(...)
   newclass.template = nil
 
   return setmetatable(newclass, metatable)
-
 end
 
 return setmetatable({}, metatable)
