@@ -17,7 +17,6 @@ end
 
 function class:extend()
   local newclass = { }
-
   for k, v in pairs(self) do
     newclass[k] = v
   end
@@ -29,7 +28,6 @@ end
 function class.merge(...)
   local classes = { ... }
   local newclass = { }
-
   for i = 1, #classes do
     local current = classes[i]
     for k, v in pairs(current) do
