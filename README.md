@@ -1,5 +1,5 @@
 # Class ![Lua](https://img.shields.io/badge/lua-5.1%20%7C%20JIT-blue)
-A high-performance class manager with annotations.
+A lightweight lua class manager with annotations.
 
 ### Extending a class
 ```lua
