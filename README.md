@@ -14,10 +14,8 @@ Classes are uninstantiable if no template is defined.
 ---@param y number
 ---@param z number
 function Object:template(x, y, z)
-
   self.position = vector(x, y, z)
   self.orientation = quaterion(1, 0, 0, 0)
-
 end
 ```
 
@@ -28,10 +26,8 @@ If a class inherits from another, templates can be written like this:
 local Sphere = Object:extend()
 
 function Sphere:template()
-
   Object.template(self)
   self.radius = 5
-
 end
 ```
 
@@ -51,11 +47,9 @@ local Wheels = Object:extend()
 local Car = class.merge(Engine, Wheels)
 
 function Car:template()
-
   Object.template(self)
   Engine.template(self)
   Wheels.template(self)
-
 end
 ```
 ### Instantiating
