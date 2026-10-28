@@ -34,7 +34,7 @@ end
 
 ### Merged classes
 Merged classes are classes that inherit from multiple other classes.
-If class *A* and class *B* share field *X*, the new class obtains field *X* of class *B*, if it is the last passed class.
+If class `A` and class `B` share field `x`, the new class obtains field `x` of class `B`, considering it is the last passed class.
 ```lua
 ---@class Engine: Object
 local Engine = Object:extend()
