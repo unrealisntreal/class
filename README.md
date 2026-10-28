@@ -14,7 +14,7 @@ Classes are uninstantiable if no template is defined.
 ---@param y number
 ---@param z number
 function Object:template(x, y, z)
-  self.name     = "Object"
+  self.name = "Object"
   self.position = {x = 0, y = 0, z = 0}
 end
 ```
@@ -27,7 +27,7 @@ local Sphere = Object:extend()
 
 function Sphere:template()
   Object.template(self)
-  self.name   = "Sphere"
+  self.name = "Sphere"
   self.radius = 5
 end
 ```
