@@ -15,7 +15,7 @@ Classes are uninstantiable if no template is defined.
 ---@param z number
 function Object:template(x, y, z)
   self.name = "Object"
-  self.position = {x = 0, y = 0, z = 0}
+  self.position = { x = 0, y = 0, z = 0 }
 end
 ```
 
